@@ -13,17 +13,9 @@ Spoof geolocation for only the active tab using:
 2. Click **Load Temporary Add-on...**
 3. Select `manifest.json` from this folder
 
-## Publish to AMO
+## AMO Status
 
-1. Create an AMO developer account: https://addons.mozilla.org/developers/
-2. In AMO, create API credentials (JWT issuer + secret).
-3. Install `web-ext`:
-   - `npm install -g web-ext`
-4. Build/sign from this folder:
-   - `web-ext sign --channel=listed --api-key="$AMO_JWT_ISSUER" --api-secret="$AMO_JWT_SECRET"`
-5. Complete listing metadata in AMO (summary, screenshots, categories, support URL, privacy policy URL).
-
-Use `PRIVACY_POLICY.md` as the basis for your hosted privacy policy page.
+The extension has been submitted to Mozilla Add-ons (AMO) and is currently in the approval review process.
 
 ## How It Works
 
