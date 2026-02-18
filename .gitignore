@@ -1,0 +1,20 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Node/tooling
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build/sign artifacts
+dist/
+web-ext-artifacts/
+*.xpi
+*.zip
+
+# Local environment
+.env
+.env.*

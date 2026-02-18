@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "Tab Geo Spoofer",
+  "version": "1.0.0",
+  "description": "Override geolocation for only the current tab with coordinates, map selection, and presets.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Tab Geo Spoofer",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content-bridge.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    "inject-geolocation.js"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tab-geo-spoofer@example.local",
+      "data_collection_permissions": {
+        "required": [
+          "locationInfo"
+        ]
+      }
+    }
+  }
+}
